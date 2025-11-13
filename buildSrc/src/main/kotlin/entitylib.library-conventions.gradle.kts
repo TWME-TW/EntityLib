@@ -84,10 +84,11 @@ publishing {
 
     repositories {
         maven {
-            url = uri("https://central.sonatype.com/api/v1/publisher/upload")
+            name = "twme-repo"
+            url = uri("https://repo.twme.dev/snapshots")
             credentials {
-                username = System.getenv("OSSRH_USERNAME")
-                password = System.getenv("OSSRH_PASSWORD")
+                username = System.getenv("TWME_REPO_USER")
+                password = System.getenv("TWME_REPO_PASS")
             }
         }
     }
