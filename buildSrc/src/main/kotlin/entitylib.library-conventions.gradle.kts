@@ -65,7 +65,7 @@ publishing {
         create<MavenPublication>("EntityLib") {
             groupId = project.group as String
             artifactId = project.name
-            version = rootProject.ext["versionNoHash"].toString()
+            version = rootProject.version.toString()
             from(components["java"])
 
             pom {
