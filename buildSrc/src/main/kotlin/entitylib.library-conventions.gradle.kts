@@ -52,11 +52,11 @@ tasks {
 publishing {
     repositories {
         maven {
-            name = "pvphub-maven-tofaa"
-            url = uri("https://maven.pvphub.me/tofaa")
+            name = "twme-repo-snapshots"
+            url = uri("https://repo.twme.dev/snapshots")
             credentials {
-                username = System.getenv("PVPHUB_MAVEN_USERNAME")
-                password = System.getenv("PVPHUB_MAVEN_SECRET")
+                username = System.getenv("TWME_REPO_USERNAME")
+                password = System.getenv("TWME_REPO_PASSWORD")
             }
         }
     }

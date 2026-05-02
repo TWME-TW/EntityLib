@@ -33,9 +33,9 @@ jobs:
       - name: Build
         run: ./gradlew build
 
-      - name: Publish to PvPHub Maven (push to main only)
+      - name: Publish to TWME Repository (push to main only)
         if: github.ref == 'refs/heads/master' && github.event_name == 'push'
         env:
-          PVPHUB_MAVEN_USERNAME: ${{ secrets.PVPHUB_MAVEN_USERNAME }}
-          PVPHUB_MAVEN_SECRET: ${{ secrets.PVPHUB_MAVEN_SECRET }}
-        run: ./gradlew publishEntityLibPublicationToPvphub-maven-tofaaRepository
+          TWME_REPO_USERNAME: ${{ secrets.TWME_REPO_USERNAME }}
+          TWME_REPO_PASSWORD: ${{ secrets.TWME_REPO_PASSWORD }}
+        run: ./gradlew publishEntityLibPublicationToTwme-repo-snapshotsRepository
